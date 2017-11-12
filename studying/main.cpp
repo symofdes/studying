@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+void zadacha1()
 {
   double a, y;
   cin>>a;
@@ -13,5 +13,10 @@ int main()
     if ( abs(a) <= 3 )
       y = -abs(a) + 3;
   cout << "y="<< y << endl;
+}
+
+int main()
+{
+  zadacha1();
   return 0;
 }
