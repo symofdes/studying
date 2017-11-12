@@ -25,9 +25,32 @@ void zadacha2()
     cout << "NO!" << endl;
 }
 
+void zadacha3()
+{
+  int x, max, min;
+  min = 1000000;
+  max = -1000000;
+  cin >> x;
+  if (x == 0)
+  {
+    cout<< "End of seq"<<endl;
+    return;
+  }
+  while(x != 0)
+  {
+    if(x > max)
+      max = x;
+    if(x < min)
+      min = x;
+    cin >> x;
+  }
+  cout<< (double) min / max<< endl;
+}
+
 int main()
 {
   zadacha1();
   zadacha2();
+  zadacha3();
   return 0;
 }
