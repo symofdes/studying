@@ -47,10 +47,28 @@ void zadacha3()
   cout<< (double) min / max<< endl;
 }
 
+void zadacha4()
+{
+  int N, M;
+  cin >> N >> M;
+  if (N >= M)
+  {
+    cout << "ERROR of input";
+    return;
+  }
+  for (int i = N; i <= M; i++)
+  {
+    for (int k = 0; k < i; k++)
+      cout << i << ' ';
+    cout << endl;
+  }
+}
+
 int main()
 {
   zadacha1();
   zadacha2();
   zadacha3();
+  zadacha4();
   return 0;
 }
