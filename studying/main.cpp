@@ -64,11 +64,53 @@ void zadacha4()
   }
 }
 
+int digits(int N) // считает кол-во цифр в числе
+{
+  int i=0;
+  while ( N != 0)
+  {
+    N = N / 10;
+    i++;
+  }
+  return i;
+}
+
+int Arms(int N, int size) //считает степенную сумму
+{
+  int sum = 0;
+  for(int i = 0; i < size; i++)
+  {
+    sum = sum + pow( N % 10 , size);
+    N = N / 10;
+  }
+  return sum;
+}
+
+void zadacha5()
+{
+  int N, newd, size, q;
+  cin >> q;
+  for (int i=0; i < q; i++)
+  {
+    cin >> N;
+    size = digits(N);
+    newd = Arms(N, size);
+    if (N == newd)
+    {
+      cout << "YES" <<endl;
+      return;
+    }
+
+  }
+  cout << "NO" << endl;
+}
+
 int main()
 {
-  zadacha1();
+  /*zadacha1();
   zadacha2();
   zadacha3();
-  zadacha4();
+  zadacha4();*/
+  zadacha5();
   return 0;
 }
